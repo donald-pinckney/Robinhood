@@ -1,7 +1,7 @@
 requests>=2.13.*
 six>=1.10.0,<=1.11.0
+python-dateutil>=2.8.2,<3.0.0
 
-dateutil
 time
 random
 hmac
