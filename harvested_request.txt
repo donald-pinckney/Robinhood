@@ -1,0 +1,127 @@
+web buy request:
+
+:method	POST
+:scheme	https
+:path	/orders/
+:authority	api.robinhood.com
+content-type	application/json
+x-timezone-id	Asia/Shanghai
+accept	*/*
+authorization	Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJkY3QiOjE2NDc0NDY5OTMsImRldmljZV9oYXNoIjoiN2ZmMDU5NmI1N2YyZWViN2NlN2E5MTI2MTMzMzVhODYiLCJleHAiOjE2ODgwNTQ1NDEsImxldmVsMl9hY2Nlc3MiOmZhbHNlLCJtZXRhIjp7Im9pZCI6ImM4MlNIMFdaT3NhYk9YR1Ayc3hxY2ozNEZ4a3ZmbldSWkJLbEJqRlMiLCJvbiI6IlJvYmluaG9vZCJ9LCJvcHRpb25zIjpmYWxzZSwic2NvcGUiOiJpbnRlcm5hbCIsInNlcnZpY2VfcmVjb3JkcyI6W3siaGFsdGVkIjpmYWxzZSwic2VydmljZSI6Im51bW11c191cyIsInNoYXJkX2lkIjoxLCJzdGF0ZSI6ImF2YWlsYWJsZSJ9LHsiaGFsdGVkIjpmYWxzZSwic2VydmljZSI6ImJyb2tlYmFja191cyIsInNoYXJkX2lkIjo0LCJzdGF0ZSI6ImF2YWlsYWJsZSJ9XSwic3JtIjp7ImJfdXMiOnsiaGwiOmZhbHNlLCJzaWQiOjQsInN0IjoiYXYifSwibl91cyI6eyJobCI6ZmFsc2UsInNpZCI6MSwic3QiOiJhdiJ9fSwidG9rZW4iOiJySzF2Qm1aQWlTUml0bFFQSXdCM3JhS1FaMkZzOFAiLCJ1c2VyX2lkIjoiZjZjNDdmZjgtNWRkZi00MmU1LWE0NDAtNjIzZGFlYjMxN2YzIiwidXNlcl9vcmlnaW4iOiJVUyJ9.N-oHW43xso_kC63OnAf_e0_UuNdbFCkGwonMGQL8WMOZcuARDRf9lcH6iVdc-wnrRGZdLhdB9kgYq54ELH-b9ZxxYRJEBjGcmw2s_LF7-BOm5pCSE5BL0BACqL3aXpAUDPY2_MIWjxZF9RdbgtJJ4u8DpHzJ8X0DhRwqoJ_7EJURBr2Wploq0L_MUIqZZDwxZxnyDDe-UWRZHZS9medgXiGgrO-YzmuqpB19Bt_RqOQNGgaZ1HWino2WA9Pt16pKFxoAyrQyUZ6GtjPFHjf8Mb6lLp29E-9lfGs9AKfelcUJ7uAhPWa4IfLmVie_nQhJaRgoe9GMYkidYFBdm_lHTg
+sec-fetch-site	same-site
+x-robinhood-api-version	1.431.4
+accept-language	en-US,en;q=0.9
+sec-fetch-mode	cors
+x-hyper-ex	enabled
+origin	https://robinhood.com
+user-agent	Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15
+referer	https://robinhood.com/
+content-length	392
+accept-encoding	gzip, deflate, br
+sec-fetch-dest	empty
+
+
+{
+	"account": "https://api.robinhood.com/accounts/571172345/",
+	"extended_hours": false,
+	"instrument": "https://api.robinhood.com/instruments/f0a85ee9-9949-4639-b1cd-0621cb619a6b/",
+	"quantity": "1",
+	"order_form_version": 2,
+	"ref_id": "22caf19c-ff01-4372-b1d4-f28974203a36",
+	"side": "buy",
+	"symbol": "INTR",
+	"time_in_force": "gfd",
+	"trigger": "immediate",
+	"type": "limit",
+	"preset_percent_limit": "0.05",
+	"price": "3.51"
+}
+
+
+
+
+
+
+
+
+
+response:
+
+:status	201
+content-type	application/json
+content-length	1955
+location	https://api.robinhood.com/orders/6492891f-0826-43ff-b1cd-6f8a0060ac72/
+server	envoy
+date	Wed, 21 Jun 2023 05:22:39 GMT
+allow	GET, POST, HEAD, OPTIONS
+x-robinhood-api-version	brokeback/1.433.103-1686868731-g83a7562bdd83ec3adc5cc5dbf511b56f3dd664c6
+vary	Accept-Language, Cookie, Origin
+content-language	en-us
+access-control-allow-origin	https://robinhood.com
+trace-uuid	8974a20b-86d7-4289-87cb-586ebf803d01
+access-control-allow-credentials	true
+x-cache	Miss from cloudfront
+via	1.1 ed37c33f810e15626ccb22e4c3567602.cloudfront.net (CloudFront)
+x-amz-cf-pop	NRT57-C4
+x-amz-cf-id	lLkC_9TerWgVGLom8yvZmCKhfhkV33SEJPixb5MO9pT-SZkQz6hlGw==
+
+
+
+{
+	"id": "6492891f-0826-43ff-b1cd-6f8a0060ac72",
+	"ref_id": "22caf19c-ff01-4372-b1d4-f28974203a36",
+	"url": "https:\/\/api.robinhood.com\/orders\/6492891f-0826-43ff-b1cd-6f8a0060ac72\/",
+	"account": "https:\/\/api.robinhood.com\/accounts\/571172345\/",
+	"user_uuid": "f6c47ff8-5ddf-42e5-a440-623daeb317f3",
+	"position": "https:\/\/api.robinhood.com\/positions\/571172345\/f0a85ee9-9949-4639-b1cd-0621cb619a6b\/",
+	"cancel": "https:\/\/api.robinhood.com\/orders\/6492891f-0826-43ff-b1cd-6f8a0060ac72\/cancel\/",
+	"instrument": "https:\/\/api.robinhood.com\/instruments\/f0a85ee9-9949-4639-b1cd-0621cb619a6b\/",
+	"instrument_id": "f0a85ee9-9949-4639-b1cd-0621cb619a6b",
+	"cumulative_quantity": "0.00000000",
+	"average_price": null,
+	"fees": "0.00",
+	"state": "unconfirmed",
+	"pending_cancel_open_agent": null,
+	"type": "limit",
+	"side": "buy",
+	"time_in_force": "gfd",
+	"trigger": "immediate",
+	"price": "3.51000000",
+	"stop_price": null,
+	"quantity": "1.00000000",
+	"reject_reason": null,
+	"created_at": "2023-06-21T05:22:39.113532Z",
+	"updated_at": "2023-06-21T05:22:39.113558Z",
+	"last_transaction_at": "2023-06-21T05:22:39.113532Z",
+	"executions": [],
+	"extended_hours": false,
+	"market_hours": "regular_hours",
+	"override_dtbp_checks": false,
+	"override_day_trade_checks": false,
+	"response_category": null,
+	"stop_triggered_at": null,
+	"last_trail_price": null,
+	"last_trail_price_updated_at": null,
+	"last_trail_price_source": null,
+	"dollar_based_amount": null,
+	"total_notional": {
+		"amount": "3.51",
+		"currency_code": "USD",
+		"currency_id": "1072fc76-1862-41ab-82c2-485837590762"
+	},
+	"executed_notional": null,
+	"investment_schedule_id": null,
+	"is_ipo_access_order": false,
+	"ipo_access_cancellation_reason": null,
+	"ipo_access_lower_collared_price": null,
+	"ipo_access_upper_collared_price": null,
+	"ipo_access_upper_price": null,
+	"ipo_access_lower_price": null,
+	"is_ipo_access_price_finalized": false,
+	"is_visible_to_user": true,
+	"has_ipo_access_custom_price_limit": false,
+	"is_primary_account": true,
+	"order_form_version": 2,
+	"preset_percent_limit": "0.050000",
+	"order_form_type": "collaring_removal"
+}

@@ -70,7 +70,7 @@ class Robinhood:
             "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
             "X-Robinhood-API-Version": "1.0.0",
             "Connection": "keep-alive",
-            "User-Agent": "Robinhood/823 (iPhone; iOS 7.1.2; Scale/2.00)"
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Safari/605.1.15" #"Robinhood/823 (iPhone; iOS 16.3.1; Scale/2.00)" # 823
         }
         self.session.headers = self.headers
         self.device_token = ""
@@ -1511,15 +1511,20 @@ class Robinhood:
 
         for field, value in [
             ('account', self.get_account()['url']),
+            ('extended_hours', False),
             ('instrument', instrument_URL),
+            ('quantity', str(quantity)),
+            ('order_form_version', 2),
+            ('ref_id', "25caf19c-ff01-4372-b1d4-f28974203a36"),
+            ('side', side),
             ('symbol', symbol),
-            ('type', order_type),
             ('time_in_force', time_in_force),
             ('trigger', trigger),
-            ('price', price),
-            ('stop_price', stop_price),
-            ('quantity', quantity),
-            ('side', side)
+            # ('type', order_type),
+            ('price', str(price)),
+            # ('stop_price', stop_price),
+            ('type', 'limit'),
+            ('preset_percent_limit', '0.05'),
         ]:
             if (value is not None):
                 payload[field] = value
