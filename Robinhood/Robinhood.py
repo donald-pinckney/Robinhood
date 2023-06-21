@@ -21,6 +21,7 @@ import hmac
 import base64
 import struct
 import hashlib
+import secrets
 
 # Application-specific imports
 from . import exceptions as RH_exception
@@ -1353,18 +1354,24 @@ class Robinhood:
 
         payload = {}
 
+        password_length_limit_order = 16
+        ref_id_limit_order = secrets.token_urlsafe(password_length_limit_order)
+
         for field, value in [
             ('account', self.get_account()['url']),
+            ('extended_hours', True),
             ('instrument', instrument_URL),
+            ('quantity', str(quantity)),
+            ('order_form_version', 2),
+            ('ref_id', ref_id_limit_order),
+            ('side', side),
             ('symbol', symbol),
-            ('type', order_type),
             ('time_in_force', time_in_force),
             ('trigger', trigger),
-            ('price', price),
-            ('stop_price', stop_price),
-            ('quantity', quantity),
-            ('side', side)
+            ('type', 'limit'),
+            ('price', str(price))
         ]:
+
             if (value is not None):
                 payload[field] = value
 
@@ -1509,13 +1516,16 @@ class Robinhood:
 
         payload = {}
 
+        password_length_market_order = 16
+        ref_id_market_order = secrets.token_urlsafe(password_length_market_order)
+
         for field, value in [
             ('account', self.get_account()['url']),
             ('extended_hours', False),
             ('instrument', instrument_URL),
             ('quantity', str(quantity)),
             ('order_form_version', 2),
-            ('ref_id', "25caf19c-ff01-4372-b1d4-f28974203a36"),
+            ('ref_id', ref_id_market_order),
             ('side', side),
             ('symbol', symbol),
             ('time_in_force', time_in_force),
